@@ -8,7 +8,7 @@ namespace OOP6
 {
     class Dom
     {
-        private string nazov, typ, poschodie;
+        protected string nazov, typ, poschodie;
         private int obytneMiestnosti;
         private float uzitkovaPlocha, zastavanaPlocha;
 
@@ -21,6 +21,16 @@ namespace OOP6
             this.uzitkovaPlocha = uzitkovaPlocha;
             this.zastavanaPlocha = zastavanaPlocha;
         }
+        public void poskytniInformacie()
+        {
+            Console.WriteLine("parametre");
+            Console.WriteLine("nazov {0} \nTyp: {1}\nPoschodie : {2} ", nazov,typ,poschodie);
+        }
+        public float ZistiVyuzitieZastavanejplochy()
+        {
+            return (zastavanaPlocha / uzitkovaPlocha) * 100;
+        }
+
     
         
         
